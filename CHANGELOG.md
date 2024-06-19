@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.2.2"></a>
+## [1.2.2](https://www.github.com/exa-studio/utils-library/releases/tag/v1.2.2) (2024-06-19)
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://www.github.com/exa-studio/utils-library/releases/tag/v1.2.1) (2024-06-19)
 
