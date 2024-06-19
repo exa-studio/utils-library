@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("utils-library")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+155df4bbee492d16961167c11be7b07b622efcaa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cdf53e153691c8edbbeb60b7ad445b5dfdc8dd2a")]
 [assembly: System.Reflection.AssemblyProductAttribute("utils-library")]
 [assembly: System.Reflection.AssemblyTitleAttribute("utils-library")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
