@@ -2,7 +2,7 @@ name: git tag release and npm package publisher
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   publish_tag_package:
     runs-on: ubuntu-latest
@@ -16,7 +16,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
-          RELEASE_BRANCHES: master
+          RELEASE_BRANCHES: main
 
       - name: Pack
         run: dotnet pack --configuration debug
