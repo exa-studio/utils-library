@@ -20,7 +20,7 @@ jobs:
         id: bump_version
         uses: anothrNick/github-tag-action@1.17.2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
           WITH_V: true
           RELEASE_BRANCHES: main
 
@@ -28,7 +28,7 @@ jobs:
         run: dotnet pack --configuration debug
 
       - name: Push
-        run: dotnet nuget push "./bin/Debug/*.nupkg"  --api-key ${{ secrets.GITHUB_TOKEN }}  --source "github"
+        run: dotnet nuget push "./bin/Debug/*.nupkg"  --api-key ${{ secrets.TOKEN_GITHUB }}  --source "github"
 
     #   - run: |
     #       git config --global user.email "kevingil1910@gmail.com"
