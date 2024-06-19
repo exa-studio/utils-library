@@ -27,6 +27,9 @@ jobs:
       - name: Pack
         run: dotnet pack --configuration debug
 
+      - name: ls
+        run: cat nuget.config
+
       - name: Push
         run: dotnet nuget push "*/bin/debug/*.nupkg"  --api-key ${{ secrets.GITHUB_TOKEN }}  --source "github"
 
