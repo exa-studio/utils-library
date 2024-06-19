@@ -31,7 +31,7 @@ jobs:
         run: ls -la
 
       - name: Push
-        run: dotnet nuget push "*/bin/debug/*.nupkg"  --api-key ${{ secrets.GITHUB_TOKEN }}  --source "github"
+        run: dotnet nuget push "./bin/debug/*.nupkg"  --api-key ${{ secrets.GITHUB_TOKEN }}  --source "github"
 
     #   - run: |
     #       git config --global user.email "kevingil1910@gmail.com"
