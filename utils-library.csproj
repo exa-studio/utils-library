@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Version>1.1.1</Version>
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>utils_library</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
