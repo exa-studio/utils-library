@@ -27,7 +27,8 @@
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.pkg.github.com/IncubadoraDigital/index.json": {}
+        "https://nuget.pkg.github.com/IncubadoraDigital/index.json": {},
+        "https://nuget.pkg.github.com/exa-studio/index.json": {}
       },
       "frameworks": {
         "net8.0": {
