@@ -41,18 +41,14 @@ jobs:
       - name: Push
         run: dotnet nuget push "./bin/Debug/*.nupkg"  --api-key ${{ secrets.TOKEN_GITHUB }}  --source "github"
 
-      - name: Push changes to GitHub
-        if: steps.versionize.outcome == 'success'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-          tags: true
+      # - name: Push changes to GitHub
+      #   if: steps.versionize.outcome == 'success'
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: ${{ github.ref }}
+      #     tags: true
 
-    #   - run: |
-    #       git config --global user.email "kevingil1910@gmail.com"
-    #       git config --global user.name "${{ github.actor }}"
-    #       echo "${{ steps.bump_version.outputs.tag }}"
-    #   - run: npm version "${{ steps.bump_version.outputs.tag }}" && npm publish
-    #     env:
-    #       NODE_AUTH_TOKEN:
+      - name: Commit new version
+      run: |
+          git push --follow-tags origin ${{ github.ref }}
