@@ -28,6 +28,11 @@ jobs:
         if: steps.versionize.outcome != 'success'
         run: echo "Skipping Release. No release required."
 
+      - name: Push changes to GitHub
+        if: steps.versionize.outcome == 'success'
+        run: |
+          git push --follow-tags origin ${{ github.ref }}
+
       - name: Find and Replace Nuget
         uses: jacobtomlinson/gha-find-replace@v2
         with:
@@ -40,15 +45,3 @@ jobs:
 
       - name: Push
         run: dotnet nuget push "./bin/Debug/*.nupkg"  --api-key ${{ secrets.TOKEN_GITHUB }}  --source "github"
-
-      # - name: Push changes to GitHub
-      #   if: steps.versionize.outcome == 'success'
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: ${{ github.ref }}
-      #     tags: true
-
-      - name: Commit new version
-        run: |
-          git push --follow-tags origin ${{ github.ref }}
