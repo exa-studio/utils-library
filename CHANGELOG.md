@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.0.0"></a>
+## [5.0.0](https://www.github.com/exa-studio/utils-library/releases/tag/v5.0.0) (2024-06-20)
+
+### Features
+
+* New release version ([6229cf9](https://www.github.com/exa-studio/utils-library/commit/6229cf9e482de628b5f95262f067e56f30c0f911))
+
+### Breaking Changes
+
+* New release version ([6229cf9](https://www.github.com/exa-studio/utils-library/commit/6229cf9e482de628b5f95262f067e56f30c0f911))
+
 <a name="4.2.0"></a>
 ## [4.2.0](https://www.github.com/exa-studio/utils-library/releases/tag/v4.2.0) (2024-06-20)
 
