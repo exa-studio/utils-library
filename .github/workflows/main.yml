@@ -11,6 +11,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup git
+        run: |
+          git config --local user.email "<user@email.com>"
+          git config --local user.name "<username>"
+
       - name: Install Versionize
         run: dotnet tool install --global Versionize
 
@@ -22,11 +27,6 @@ jobs:
       - name: No release required
         if: steps.versionize.outcome != 'success'
         run: echo "Skipping Release. No release required."
-
-      - name: Setup git
-        run: |
-          git config --local user.email "<user@email.com>"
-          git config --local user.name "<username>"
 
       - name: Push changes to GitHub
         if: steps.versionize.outcome == 'success'
