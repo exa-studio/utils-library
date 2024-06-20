@@ -50,5 +50,5 @@ jobs:
       #     tags: true
 
       - name: Commit new version
-      run: |
+        run: |
           git push --follow-tags origin ${{ github.ref }}
