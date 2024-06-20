@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.0"></a>
+## [4.1.0](https://www.github.com/exa-studio/utils-library/releases/tag/v4.1.0) (2024-06-20)
+
+### Features
+
+* current Date feature ([97a8a30](https://www.github.com/exa-studio/utils-library/commit/97a8a30e8cd3837ac556db64c3f6c2c9904982f1))
+
 <a name="4.0.0"></a>
 ## [4.0.0](https://www.github.com/exa-studio/utils-library/releases/tag/v4.0.0) (2024-06-20)
 
