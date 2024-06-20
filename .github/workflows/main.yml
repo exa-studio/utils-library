@@ -28,14 +28,6 @@ jobs:
         if: steps.versionize.outcome != 'success'
         run: echo "Skipping Release. No release required."
 
-      - name: Push changes to GitHub
-        if: steps.versionize.outcome == 'success'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.TOKEN_GITHUB }}
-          branch: ${{ github.ref }}
-          tags: true
-
       - name: Find and Replace Nuget
         uses: jacobtomlinson/gha-find-replace@v2
         with:
@@ -43,19 +35,19 @@ jobs:
           replace: ${{ secrets.NUGET_CONFIG }}
           regex: false
 
-      - name: Bump version and push tag
-        id: bump_version
-        uses: anothrNick/github-tag-action@1.17.2
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
-          WITH_V: true
-          RELEASE_BRANCHES: main
-
       - name: Pack
         run: dotnet pack --configuration debug
 
       - name: Push
         run: dotnet nuget push "./bin/Debug/*.nupkg"  --api-key ${{ secrets.TOKEN_GITHUB }}  --source "github"
+
+      - name: Push changes to GitHub
+        if: steps.versionize.outcome == 'success'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          tags: true
 
     #   - run: |
     #       git config --global user.email "kevingil1910@gmail.com"
