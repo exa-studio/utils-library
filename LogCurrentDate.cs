@@ -6,8 +6,6 @@ public static class LogCurrentDate
     {
         Console.WriteLine(DateTime.Now);
         Console.WriteLine("test");
-        Console.WriteLine("test");
-
     }
 
 }
