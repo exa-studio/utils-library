@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.0"></a>
+## [2.0.0](https://www.github.com/exa-studio/utils-library/releases/tag/v2.0.0) (2024-06-19)
+
+### Features
+
+* a really cool new feature ([1e405cd](https://www.github.com/exa-studio/utils-library/commit/1e405cd7e66e31d744560388828c873bb2afee40))
+
+### Breaking Changes
+
+* a really cool new feature ([1e405cd](https://www.github.com/exa-studio/utils-library/commit/1e405cd7e66e31d744560388828c873bb2afee40))
+
 <a name="1.2.4"></a>
 ## [1.2.4](https://www.github.com/exa-studio/utils-library/releases/tag/v1.2.4) (2024-06-19)
 
