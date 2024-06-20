@@ -13,8 +13,8 @@ jobs:
 
       - name: Setup git
         run: |
-          git config --local user.email "<user@email.com>"
-          git config --local user.name "<username>"
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
 
       - name: Install Versionize
         run: dotnet tool install --global Versionize
