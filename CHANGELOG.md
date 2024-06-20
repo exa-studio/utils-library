@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.2.0"></a>
+## [4.2.0](https://www.github.com/exa-studio/utils-library/releases/tag/v4.2.0) (2024-06-20)
+
+### Features
+
+* test to deploy min version ([e1ea863](https://www.github.com/exa-studio/utils-library/commit/e1ea863005a2f1b6338fe396cfe359f0ff11b433))
+
+### Other
+
+* Merge branch 'main' of https://github.com/exa-studio/utils-library ([3960092](https://www.github.com/exa-studio/utils-library/commit/3960092317d614d376e59d48f9911829004c0cac))
+
 <a name="4.1.0"></a>
 ## [4.1.0](https://www.github.com/exa-studio/utils-library/releases/tag/v4.1.0) (2024-06-20)
 
