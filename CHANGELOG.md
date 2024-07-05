@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.1.0"></a>
+## [5.1.0](https://www.github.com/exa-studio/utils-library/releases/tag/v5.1.0) (2024-07-05)
+
+### Features
+
+* a really cool new feature ([6071f62](https://www.github.com/exa-studio/utils-library/commit/6071f62ae215a7ad45e50ce8bc26a848bc18a103))
+
+### Other
+
+* Merge branch 'main' of https://github.com/exa-studio/utils-library ([de93d01](https://www.github.com/exa-studio/utils-library/commit/de93d011507f0639458ff61c86f909e3652d52e3))
+
 <a name="5.0.0"></a>
 ## [5.0.0](https://www.github.com/exa-studio/utils-library/releases/tag/v5.0.0) (2024-06-20)
 
