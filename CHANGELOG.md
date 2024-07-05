@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.3.0"></a>
+## [5.3.0](https://www.github.com/exa-studio/utils-library/releases/tag/v5.3.0) (2024-07-05)
+
+### Features
+
+* a really cool new feature ([c90d8fd](https://www.github.com/exa-studio/utils-library/commit/c90d8fd4e948dcc35db9c17e07d7078a41609916))
+
 <a name="5.2.0"></a>
 ## [5.2.0](https://www.github.com/exa-studio/utils-library/releases/tag/v5.2.0) (2024-07-05)
 
