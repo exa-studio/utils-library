@@ -44,8 +44,8 @@ jobs:
       - name: Pack
         run: dotnet pack --configuration debug
 
-      - name: Push
-        run: dotnet nuget push "./bin/Debug/*.nupkg"  --api-key ${{ secrets.TOKEN_GITHUB }}  --source "github"
+      # - name: Push
+      #   run: dotnet nuget push "./bin/Debug/*.nupkg"  --api-key ${{ secrets.TOKEN_GITHUB }}  --source "github"
 
       - name: Clean Older NuGet Package
         uses: exa-studio/clean-older-nuget-pkg-action@V2.0.01
