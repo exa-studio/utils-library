@@ -13,43 +13,21 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup git
-        run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "github-actions"
-
-      # - name: Install Versionize
-      #   run: dotnet tool install --global Versionize
-
-      # - name: Versioning
-      #   id: versionize
-      #   run: versionize --changelog-all --exit-insignificant-commits
-      #   continue-on-error: true
-
-      # - name: No release required
-      #   if: steps.versionize.outcome != 'success'
-      #   run: echo "Skipping Release. No release required."
-
-      # - name: Push changes to GitHub
-      #   if: steps.versionize.outcome == 'success'
-      #   run: |
-      #     git push --follow-tags origin ${{ github.ref }}
-
-      # - name: Find and Replace Nuget
-      #   uses: jacobtomlinson/gha-find-replace@v2
-      #   with:
-      #     find: "<configuration></configuration>"
-      #     replace: ${{ secrets.NUGET_CONFIG }}
-      #     regex: false
+      - name: Find and Replace Nuget
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "<configuration></configuration>"
+          replace: ${{ secrets.NUGET_CONFIG }}
+          regex: false
 
       - name: Pack
         run: dotnet pack --configuration debug
-
-      # - name: Push
-      #   run: dotnet nuget push "./bin/Debug/*.nupkg"  --api-key ${{ secrets.TOKEN_GITHUB }}  --source "github"
 
       - name: Clean Older NuGet Package
         uses: exa-studio/clean-older-nuget-pkg-action@V2.0.11
         with:
           organization-package-url: "https://api.github.com/orgs/exa-studio/packages/nuget/utils-library/versions"
           gh-token: ${{ secrets.TOKEN_GITHUB }}
+
+      - name: Push
+        run: dotnet nuget push "./bin/Debug/*.nupkg"  --api-key ${{ secrets.TOKEN_GITHUB }}  --source "github"
