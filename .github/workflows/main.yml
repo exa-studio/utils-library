@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+
 jobs:
   publish_tag_package:
     runs-on: ubuntu-latest
