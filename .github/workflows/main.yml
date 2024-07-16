@@ -13,6 +13,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup git
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+
       - name: Find and Replace Nuget
         uses: jacobtomlinson/gha-find-replace@v2
         with:
