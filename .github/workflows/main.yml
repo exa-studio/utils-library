@@ -48,7 +48,7 @@ jobs:
         run: dotnet nuget push "./bin/Debug/*.nupkg"  --api-key ${{ secrets.TOKEN_GITHUB }}  --source "github"
 
       - name: Clean Older NuGet Package
-        uses: exa-studio/clean-older-nuget-pkg-action@V2.0.1
+        uses: exa-studio/clean-older-nuget-pkg-action@V2.0.01
         with:
           organization-package-url: "https://api.github.com/orgs/exa-studio/packages/nuget/utils-library/versions"
           gh-token: ${{ secrets.TOKEN_GITHUB }}
